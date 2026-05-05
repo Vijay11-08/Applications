@@ -13,11 +13,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         if(password_verify($password, $user['password'])) {
-            $_SESSION['user_id']   = $user['id'];
-            $_SESSION['user_name'] = $user['name'];
-            $_SESSION['user_role'] = $user['role'];
-            header('Location: ' . ($user['role'] === 'admin' ? 'admin/index.php' : 'index.php'));
-            exit;
+            if (isset($user['is_active']) && $user['is_active'] == 0) {
+                $error = "Your account has been deactivated. Please contact support.";
+            } else {
+                $_SESSION['user_id']   = $user['id'];
+                $_SESSION['user_name'] = $user['name'];
+                $_SESSION['user_role'] = $user['role'];
+                header('Location: ' . ($user['role'] === 'admin' ? 'admin/index.php' : 'index.php'));
+                exit;
+            }
         } else { $error = "Incorrect password. Please try again."; }
     } else { $error = "No account found with that email address."; }
 }
