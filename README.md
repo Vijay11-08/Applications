@@ -73,17 +73,6 @@ By default, the connection is set up for typical local servers:
 
 *If your local MySQL setup requires a password, please update the credentials inside `includes/db.php`.*
 
-### **Detailed Guide for XAMPP Users**
-1. **Download XAMPP:** If you don't have XAMPP installed, download and install it from the Apache Friends website.
-2. **Move Project Files:** Copy the `furniture_shop` folder and paste it into your XAMPP `htdocs` directory (typically `C:\xampp\htdocs\`). The final path should be `C:\xampp\htdocs\furniture_shop`.
-3. **Start XAMPP Control Panel:** Open the XAMPP Control Panel and click the **Start** button next to both **Apache** and **MySQL**.
-4. **Setup Database:**
-   - Open your web browser and go to `http://localhost/phpmyadmin`.
-   - Click on "New" to create a new database and name it **`furniture_db`**.
-   - Select the newly created `furniture_db` database, go to the **Import** tab.
-   - Click **Choose File**, select `furniture_shop/database/database.sql` from your `htdocs` directory, and click **Import** (or Go) at the bottom.
-5. **Run the Project:** Open your browser and visit `http://localhost/furniture_shop` to view and explore the website.
-
 ---
 
 ## 🔑 Demo Credentials
