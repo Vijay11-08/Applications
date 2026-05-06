@@ -43,6 +43,29 @@
 
 ---
 
+## ⚡ System Architecture & Efficiency
+
+Luxura is designed with performance, maintainability, and security in mind. By avoiding heavy front-end frameworks, the application achieves lightning-fast load times and an exceptionally smooth user experience.
+
+### 📂 Directory Structure
+```text
+furniture_shop/
+├── admin/          # Admin dashboard and management scripts
+├── assets/         # CSS, JS, and image assets
+├── database/       # SQL schemas and mock data
+├── includes/       # Reusable components (Header, Footer, DB config)
+├── index.php       # Main landing page
+└── ...             # Core logic files (Cart, Checkout, Shop, etc.)
+```
+
+### 🛡️ Performance & Security Highlights
+- **Zero-Bloat Frontend:** Written in pure HTML/CSS/JS, eliminating unnecessary payload and ensuring instant rendering.
+- **Optimized Database Queries:** Efficient relational database design for fast data retrieval.
+- **Secure Authentication:** Utilizes robust PHP session management to prevent unauthorized access and protect user data.
+- **Modular Codebase:** Reusable `includes/` ensure code maintainability and keep the architecture clean and scalable.
+
+---
+
 ## 🚀 Installation & Setup Guide
 
 This project is built to run effortlessly on local development servers like **Laragon** or **XAMPP**. Follow the step-by-step instructions below to get the project running.
